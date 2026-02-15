@@ -49,43 +49,62 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
-            <div class="hero-content" style="flex: 1;">
-                <h1>Trusted Family Daycare With <span class="text-accent">14 Years</span> of Experience</h1>
-                <p>At Ceja Family Daycare, your child receives loving care in a safe, structured, and nurturing home
-                    environment. We provide dependable 24/7 childcare for working families who need flexible
-                    hours—including nights and weekends.</p>
+    <section id="home" class="hero" style="position: relative; overflow: hidden;">
+        <!-- Decorative Handprints -->
+        <!-- Decorative Handprints -->
+        <img src="images/branding/hand-blue.png" class="handprint-decor hand-hero-top-right" alt="">
+        <img src="images/branding/hand-red.png" class="handprint-decor hand-hero-bottom-left" alt="">
 
-                <div class="hero-checks">
-                    <div class="check-item"><i class="fas fa-check-circle check-icon"></i> Licensed & Experienced</div>
-                    <div class="check-item"><i class="fas fa-check-circle check-icon"></i> Healthy Meals & Snacks
-                        Included</div>
-                    <div class="check-item"><i class="fas fa-check-circle check-icon"></i> CCRC & Subsidy Programs
-                        Accepted</div>
-                    <div class="check-item"><i class="fas fa-check-circle check-icon"></i> Safe, Clean, Family
-                        Environment</div>
-                </div>
+        <div class="container hero-container" style="position: relative; z-index: 1;">
+            <div class="hero-content">
+                <h1>Trusted Family Daycare With <span class="text-accent">14 Years</span> of Experience</h1>
+                <p class="hero-subtitle"
+                    style="font-size: 1.25rem; margin-bottom: 32px; color: var(--color-text-light);">
+                    Loving, safe, and structured childcare available 24/7 for working families.
+                </p>
 
                 <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
             </div>
-            <div class="hero-image" style="flex: 1;">
-                <!-- Placeholder for Hero Image -->
-                <img src="https://placehold.co/600x400/00457C/white?text=Happy+Children+Playing"
-                    alt="Happy children learning" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <div class="hero-image">
+                <!-- Hero Video -->
+                <video autoplay loop muted playsinline poster="images/hero/hero.png"
+                    style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <source src="images/hero/hero-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tour Section -->
+    <section class="section" style="background-color: #FAFAFA;">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 24px;">Tour Our Daycare</h2>
+            <p style="margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Take a virtual tour of our safe, fun, and learning-focused environment.
+            </p>
+
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4?si=placeholder"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
     <!-- Why Parents Choose Us -->
-    <section id="about" class="section">
-        <div class="container">
+    <section id="about" class="section" style="position: relative; overflow: hidden;">
+        <img src="images/branding/hand-yellow.png" class="hand-section-right" style="top: 20%;" alt="">
+        <img src="images/branding/hand-blue.png" class="hand-section-left" style="bottom: 10%;" alt="">
+
+        <div class="container" style="position: relative; z-index: 1;">
             <h2 class="text-center" style="margin-bottom: 48px;">Why Parents Choose Us</h2>
 
             <div class="features-grid">
                 <!-- Card 1 -->
                 <div class="feature-card">
-                    <img src="https://placehold.co/400x250/FF6B6B/white?text=Loving+Care" alt="Caregiver with child"
+                    <img src="images/features/feature-care.png" alt="Loving caregiver reading to toddler"
                         class="card-img">
                     <div class="card-content">
                         <!-- <div class="feature-icon" style="color: #FF6B6B;"><i class="fas fa-heart"></i></div> -->
@@ -96,8 +115,7 @@
 
                 <!-- Card 2 -->
                 <div class="feature-card">
-                    <img src="https://placehold.co/400x250/FFD93D/white?text=Flexible+Hours" alt="Sleeping child"
-                        class="card-img">
+                    <img src="images/features/feature-hours.png" alt="Peaceful baby sleeping in crib" class="card-img">
                     <div class="card-content">
                         <!-- <div class="feature-icon" style="color: #FFD93D;"><i class="fas fa-clock"></i></div> -->
                         <h3>Open 24/7 – Built for Working Parents</h3>
@@ -108,8 +126,8 @@
 
                 <!-- Card 3 -->
                 <div class="feature-card">
-                    <img src="https://placehold.co/400x250/85BB65/white?text=Healthy+Meals"
-                        alt="Child eating healthy snack" class="card-img">
+                    <img src="images/features/feature-meals.png" alt="Toddler eating healthy fruit snack"
+                        class="card-img">
                     <div class="card-content">
                         <!-- <div class="feature-icon" style="color: #85BB65;"><i class="fas fa-apple-alt"></i></div> -->
                         <h3>Healthy Meals & Snacks Provided</h3>
@@ -119,7 +137,7 @@
 
                 <!-- Card 4 -->
                 <div class="feature-card">
-                    <img src="https://placehold.co/400x250/FFD93D/white?text=Safe+Home" alt="Clean playroom"
+                    <img src="images/features/feature-safe.png" alt="Clean and safe playroom environment"
                         class="card-img">
                     <div class="card-content">
                         <!-- <div class="feature-icon" style="color: #FFD93D;"><i class="fas fa-home"></i></div> -->
@@ -130,7 +148,7 @@
 
                 <!-- Card 5 -->
                 <div class="feature-card">
-                    <img src="https://placehold.co/400x250/FF6B6B/white?text=Learning" alt="Child doing puzzle"
+                    <img src="images/features/feature-learning.png" alt="Child focused on building blocks"
                         class="card-img">
                     <div class="card-content">
                         <!-- <div class="feature-icon" style="color: #FF6B6B;"><i class="fas fa-shapes"></i></div> -->
@@ -142,8 +160,8 @@
 
                 <!-- Card 6 -->
                 <div class="feature-card">
-                    <img src="https://placehold.co/400x250/85BB65/white?text=Outdoor+Play"
-                        alt="Children playing outside" class="card-img">
+                    <img src="images/features/feature-outdoor.png" alt="Children playing on slide in backyard"
+                        class="card-img">
                     <div class="card-content">
                         <!-- <div class="feature-icon" style="color: #85BB65;"><i class="fas fa-sun"></i></div> -->
                         <h3>Outdoor Play & Exercise</h3>
@@ -155,14 +173,16 @@
     </section>
 
     <!-- Our Program -->
-    <section id="program" class="section" style="background-color: #f0f8ff;">
-        <div class="container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap-reverse;">
-            <div class="program-image" style="flex: 1;">
-                <img src="https://placehold.co/600x400/85BB65/white?text=Learning+Activities"
-                    alt="Children reading and playing"
+    <section id="program" class="section" style="background-color: #f0f8ff; position: relative; overflow: hidden;">
+        <img src="images/branding/hand-red.png" class="hand-program-top" alt="">
+        <img src="images/branding/hand-yellow.png" class="hand-section-right" style="bottom: 20%; top: auto;" alt="">
+
+        <div class="container program-container" style="position: relative; z-index: 1;">
+            <div class="program-image">
+                <img src="images/sections/program.png" alt="Diverse children in circle time learning activity"
                     style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
-            <div class="program-content" style="flex: 1;">
+            <div class="program-content">
                 <h4 class="text-primary">Our Program</h4>
                 <h2>A Safe & Fun Learning Environment</h2>
                 <p>We focus on age-appropriate learning activities, social development, structured daily routines,
@@ -181,14 +201,15 @@
     </section>
 
     <!-- Trust & Safety -->
-    <section class="section">
-        <div class="container" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
-            <div class="trust-image" style="flex: 1;">
-                <img src="https://placehold.co/600x400/FF6B6B/white?text=Daycare+Entrance"
-                    alt="Ceja Family Daycare Entrance"
+    <section class="section" style="position: relative; overflow: hidden;">
+        <img src="images/branding/hand-blue.png" class="hand-section-left" style="top: 10%; bottom: auto;" alt="">
+
+        <div class="container trust-container" style="position: relative; z-index: 1;">
+            <div class="trust-image">
+                <img src="images/sections/trust.png" alt="Welcoming front entrance of Ceja Family Daycare"
                     style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
-            <div class="trust-content" style="flex: 1;">
+            <div class="trust-content">
                 <h2>Trust & Safety</h2>
                 <p class="text-primary" style="font-weight: 700; margin-bottom: 16px;">Fully Licensed Family Daycare</p>
                 <p>Ceja Family Daycare operates under California License <strong>#197700478</strong>. We follow all
@@ -216,7 +237,8 @@
 
     <!-- Footer -->
     <footer id="contact">
-        <div class="container">
+        <div class="hand-footer-bg"></div>
+        <div class="container" style="position: relative; z-index: 1;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
                 <div>
                     <h3 style="color: white;">Ceja Family Daycare</h3>
