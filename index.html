@@ -8,6 +8,9 @@
     <meta name="description"
         content="Ceja Family Daycare provides loving, safe, and structured childcare in Palmdale. 14 years of experience, healthy meals included, and 24/7 flexibility. License #197700478.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +24,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -40,8 +43,8 @@
 
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Why Us</a></li>
-                    <li><a href="#program">Program</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact" class="btn btn-primary" style="padding: 10px 20px;">Contact Us</a></li>
                 </ul>
             </nav>
@@ -49,54 +52,60 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero" style="position: relative; overflow: hidden;">
-        <!-- Decorative Handprints -->
-        <!-- Decorative Handprints -->
-        <img src="images/branding/hand-blue.png" class="handprint-decor hand-hero-top-right" alt="">
-        <img src="images/branding/hand-red.png" class="handprint-decor hand-hero-bottom-left" alt="">
+    <section id="home" class="hero">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline poster="assets/img/hero/hero.png" class="hero-video-bg">
+            <source src="assets/img/hero/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-        <div class="container hero-container" style="position: relative; z-index: 1;">
-            <div class="hero-content">
+        <!-- Dark Overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content text-center">
                 <h1>Trusted Family Daycare With <span class="text-accent">14 Years</span> of Experience</h1>
-                <p class="hero-subtitle"
-                    style="font-size: 1.25rem; margin-bottom: 32px; color: var(--color-text-light);">
+                <p class="hero-subtitle">
                     Loving, safe, and structured childcare available 24/7 for working families.
                 </p>
-
-                <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
-            </div>
-            <div class="hero-image">
-                <!-- Hero Video -->
-                <video autoplay loop muted playsinline poster="images/hero/hero.png"
-                    style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <source src="images/hero/hero-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="hero-cta-wrapper">
+                    <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Video Tour Section -->
-    <section class="section" style="background-color: #FAFAFA;">
-        <div class="container text-center">
+    <section class="section video-tour-section">
+        <div class="custom-shape-divider-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container text-center" style="position: relative; z-index: 1;">
             <h2 style="margin-bottom: 24px;">Tour Our Daycare</h2>
             <p style="margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
                 Take a virtual tour of our safe, fun, and learning-focused environment.
             </p>
 
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4?si=placeholder"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nBMPdRiPOdA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Why Parents Choose Us -->
     <section id="about" class="section" style="position: relative; overflow: hidden;">
-        <img src="images/branding/hand-yellow.png" class="hand-section-right" style="top: 20%;" alt="">
-        <img src="images/branding/hand-blue.png" class="hand-section-left" style="bottom: 10%;" alt="">
+        <img src="assets/img/branding/hand-yellow.png" class="hand-section-right" style="top: 20%;" alt="">
+        <img src="assets/img/branding/hand-blue.png" class="hand-section-left" style="bottom: 10%;" alt="">
 
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="text-center" style="margin-bottom: 48px;">Why Parents Choose Us</h2>
@@ -104,10 +113,10 @@
             <div class="features-grid">
                 <!-- Card 1 -->
                 <div class="feature-card">
-                    <img src="images/features/feature-care.png" alt="Loving caregiver reading to toddler"
-                        class="card-img">
+                    <div class="feature-icon-wrapper text-heart">
+                        <i class="fas fa-heart"></i>
+                    </div>
                     <div class="card-content">
-                        <!-- <div class="feature-icon" style="color: #FF6B6B;"><i class="fas fa-heart"></i></div> -->
                         <h3>14 Years of Trusted Care</h3>
                         <p>For over a decade, families have approved of our home-safe, compassionate childcare.</p>
                     </div>
@@ -115,9 +124,10 @@
 
                 <!-- Card 2 -->
                 <div class="feature-card">
-                    <img src="images/features/feature-hours.png" alt="Peaceful baby sleeping in crib" class="card-img">
+                    <div class="feature-icon-wrapper text-info">
+                        <i class="fas fa-clock"></i>
+                    </div>
                     <div class="card-content">
-                        <!-- <div class="feature-icon" style="color: #FFD93D;"><i class="fas fa-clock"></i></div> -->
                         <h3>Open 24/7 – Built for Working Parents</h3>
                         <p>We understand work schedules vary. We offer full shifts, part time, overnight and weekend
                             care.</p>
@@ -126,10 +136,10 @@
 
                 <!-- Card 3 -->
                 <div class="feature-card">
-                    <img src="images/features/feature-meals.png" alt="Toddler eating healthy fruit snack"
-                        class="card-img">
+                    <div class="feature-icon-wrapper text-accent">
+                        <i class="fas fa-utensils"></i>
+                    </div>
                     <div class="card-content">
-                        <!-- <div class="feature-icon" style="color: #85BB65;"><i class="fas fa-apple-alt"></i></div> -->
                         <h3>Healthy Meals & Snacks Provided</h3>
                         <p>Nutritious meals are included daily to support your child's growth and development.</p>
                     </div>
@@ -137,10 +147,10 @@
 
                 <!-- Card 4 -->
                 <div class="feature-card">
-                    <img src="images/features/feature-safe.png" alt="Clean and safe playroom environment"
-                        class="card-img">
+                    <div class="feature-icon-wrapper text-success">
+                        <i class="fas fa-home"></i>
+                    </div>
                     <div class="card-content">
-                        <!-- <div class="feature-icon" style="color: #FFD93D;"><i class="fas fa-home"></i></div> -->
                         <h3>Safe, Structured Home Setting</h3>
                         <p>Children thrive in smaller groups where they receive personal attention and feel secure.</p>
                     </div>
@@ -148,10 +158,10 @@
 
                 <!-- Card 5 -->
                 <div class="feature-card">
-                    <img src="images/features/feature-learning.png" alt="Child focused on building blocks"
-                        class="card-img">
+                    <div class="feature-icon-wrapper text-primary">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="card-content">
-                        <!-- <div class="feature-icon" style="color: #FF6B6B;"><i class="fas fa-shapes"></i></div> -->
                         <h3>Educational Activities</h3>
                         <p>We engage children with age-appropriate learning, including reading, puzzles, and creative
                             arts.</p>
@@ -160,10 +170,10 @@
 
                 <!-- Card 6 -->
                 <div class="feature-card">
-                    <img src="images/features/feature-outdoor.png" alt="Children playing on slide in backyard"
-                        class="card-img">
+                    <div class="feature-icon-wrapper text-warning">
+                        <i class="fas fa-sun"></i>
+                    </div>
                     <div class="card-content">
-                        <!-- <div class="feature-icon" style="color: #85BB65;"><i class="fas fa-sun"></i></div> -->
                         <h3>Outdoor Play & Exercise</h3>
                         <p>Daily outdoor time in a safe environment promotes physical health and social interaction.</p>
                     </div>
@@ -174,100 +184,182 @@
 
     <!-- Our Program -->
     <section id="program" class="section" style="background-color: #f0f8ff; position: relative; overflow: hidden;">
-        <img src="images/branding/hand-red.png" class="hand-program-top" alt="">
-        <img src="images/branding/hand-yellow.png" class="hand-section-right" style="bottom: 20%; top: auto;" alt="">
+        <img src="assets/img/branding/hand-red.png" class="hand-program-top" alt="">
+        <img src="assets/img/branding/hand-yellow.png" class="hand-section-right" style="bottom: 20%; top: auto;"
+            alt="">
 
-        <div class="container program-container" style="position: relative; z-index: 1;">
-            <div class="program-image">
-                <img src="images/sections/program.png" alt="Diverse children in circle time learning activity"
-                    style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-            </div>
-            <div class="program-content">
-                <h4 class="text-primary">Our Program</h4>
-                <h2>A Safe & Fun Learning Environment</h2>
-                <p>We focus on age-appropriate learning activities, social development, structured daily routines,
-                    creative play, and early childhood readiness skills.</p>
-                <p style="margin-top: 16px;">Parents have peace of mind knowing their children are cared for in a
-                    secure, loving environment.</p>
+        <div class="container text-center" style="position: relative; z-index: 1;">
+            <h4 class="text-primary">Our Program</h4>
+            <h2>A Safe & Fun Learning Environment</h2>
 
-                <ul class="program-list" style="margin-top: 24px; color: var(--color-primary); font-weight: 600;">
-                    <li><i class="fas fa-chevron-right text-accent"></i> Age-appropriate learning activities</li>
-                    <li><i class="fas fa-chevron-right text-accent"></i> Social development</li>
-                    <li><i class="fas fa-chevron-right text-accent"></i> Structured daily routines</li>
-                    <li><i class="fas fa-chevron-right text-accent"></i> Creative play</li>
-                </ul>
+            <div class="program-container">
+                <div class="program-image">
+                    <img src="assets/img/sections/program.png" alt="Diverse children in circle time learning activity"
+                        style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+                <div class="program-content">
+                    <p>We focus on age-appropriate learning activities, social development, structured daily routines,
+                        creative play, and early childhood readiness skills.</p>
+                    <p style="margin-top: 16px;">Parents have peace of mind knowing their children are cared for in a
+                        secure, loving environment.</p>
+
+                    <ul class="checklist-cards" style="margin-top: 24px;">
+                        <li><i class="fas fa-chevron-right text-accent"></i> Age-appropriate learning activities</li>
+                        <li><i class="fas fa-chevron-right text-accent"></i> Social development</li>
+                        <li><i class="fas fa-chevron-right text-accent"></i> Structured daily routines</li>
+                        <li><i class="fas fa-chevron-right text-accent"></i> Creative play</li>
+                    </ul>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Trust & Safety -->
     <section class="section" style="position: relative; overflow: hidden;">
-        <img src="images/branding/hand-blue.png" class="hand-section-left" style="top: 10%; bottom: auto;" alt="">
+        <img src="assets/img/branding/hand-blue.png" class="hand-section-left" style="top: 10%; bottom: auto;" alt="">
 
-        <div class="container trust-container" style="position: relative; z-index: 1;">
-            <div class="trust-image">
-                <img src="images/sections/trust.png" alt="Welcoming front entrance of Ceja Family Daycare"
-                    style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-            </div>
-            <div class="trust-content">
-                <h2>Trust & Safety</h2>
-                <p class="text-primary" style="font-weight: 700; margin-bottom: 16px;">Fully Licensed Family Daycare</p>
-                <p>Ceja Family Daycare operates under California License <strong>#197700478</strong>. We follow all
-                    state childcare regulations to ensure your child's safety and well-being.</p>
+        <div class="container text-center" style="position: relative; z-index: 1;">
+            <h2>Trust & Safety</h2>
+            <p class="text-primary" style="font-weight: 700; margin-bottom: 32px;">Fully Licensed Family Daycare</p>
 
-                <div
-                    style="background: #f9f9f9; padding: 24px; border-radius: 16px; margin-top: 24px; border-left: 4px solid var(--color-success);">
-                    <ul class="fa-ul">
-                        <li style="margin-bottom: 8px;"><span class="fa-li"><i
-                                    class="fas fa-check text-success"></i></span>We proudly accept:</li>
-                        <li style="margin-bottom: 8px;"><span class="fa-li"><i
-                                    class="fas fa-check text-success"></i></span>CCRC</li>
-                        <li style="margin-bottom: 8px;"><span class="fa-li"><i
-                                    class="fas fa-check text-success"></i></span>Government assistance programs</li>
-                        <li style="margin-bottom: 8px;"><span class="fa-li"><i
-                                    class="fas fa-check text-success"></i></span>Subsidized childcare programs</li>
+            <div class="trust-container">
+                <div class="trust-image">
+                    <img src="assets/img/sections/trust.png" alt="Welcoming front entrance of Ceja Family Daycare"
+                        style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+                <div class="trust-content">
+                    <p>Ceja Family Daycare operates under California License <strong>#197700478</strong>. We follow all
+                        state childcare regulations to ensure your child's safety and well-being.</p>
+
+                    <p class="text-primary"
+                        style="font-weight: 700; margin-top: 32px; margin-bottom: 16px; text-align: left;">We proudly
+                        accept:</p>
+                    <ul class="checklist-cards">
+                        <li><i class="fas fa-check text-success"></i> CCRC</li>
+                        <li><i class="fas fa-check text-success"></i> Government assistance programs</li>
+                        <li><i class="fas fa-check text-success"></i> Subsidized childcare programs</li>
                     </ul>
+
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 24px;">Contact us to verify
+                        eligibility</a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="text-center">Get in Touch</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 40px;">
+                Have questions or want to schedule a tour? We'd love to hear from you! Fill out the form below or reach
+                out directly.
+            </p>
+
+            <div class="contact-grid">
+                <!-- Info Side -->
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Call or Text</h4>
+                            <p style="font-size: 1.1rem; font-weight: 700;">(818) 754-7651</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Email Us</h4>
+                            <p style="font-size: 1.1rem; font-weight: 700;">hello@cejadaycare.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Location</h4>
+                            <p style="font-size: 1.1rem; font-weight: 700;">Palmdale, CA</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Hours</h4>
+                            <p style="font-size: 1.1rem; font-weight: 700;">Open 24/7 Mon-Sun</p>
+                        </div>
+                    </div>
                 </div>
 
-                <a href="#contact" class="btn btn-primary" style="margin-top: 24px;">Contact us to verify
-                    eligibility</a>
+                <!-- Form Side -->
+                <div class="contact-form-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(123) 456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="child_age">Child's Age (Optional)</label>
+                            <input type="text" id="child_age" name="child_age" class="form-control"
+                                placeholder="e.g. 2 years old">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="hand-footer-bg"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
                 <div>
-                    <h3 style="color: white;">Ceja Family Daycare</h3>
+                    <h3 style="color: white; margin-bottom: 15px;">Ceja Family Daycare</h3>
                     <p>Loving care in a safe, structured, and nurturing home environment.</p>
                     <p style="margin-top: 16px;"><strong>License #197700478</strong></p>
                 </div>
                 <div>
-                    <h3 style="color: white;">Contact Us</h3>
-                    <p><i class="fas fa-phone-alt"></i> (818) 754-7651</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Palmdale, CA</p>
-                    <p><i class="fas fa-clock"></i> Open 24/7 Mon-Sun</p>
+                    <h3 style="color: white; margin-bottom: 15px;">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h3 style="color: white;">Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#program">Program</a></li>
-                    </ul>
+                    <h3 style="color: white; margin-bottom: 15px;">Follow Us</h3>
+                    <div style="display: flex; gap: 20px; font-size: 1.5rem;">
+                        <a href="#" style="color: white;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-yelp"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="text-center"
-                style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
                 <p>&copy; 2026 Ceja Family Daycare. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

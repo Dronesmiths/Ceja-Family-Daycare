@@ -1,0 +1,1032 @@
+:root {
+    /* Brand Colors */
+    --color-primary: #00457C;
+    /* Deep Blue from image */
+    --color-accent: #FFD93D;
+    /* Sunshine Yellow from image */
+    --color-secondary: #FF6B6B;
+    /* Heart/Warning Red */
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-white: #ffffff;
+    --color-bg-light: #f9f9f9;
+    --color-success: #85BB65;
+    /* Green for checks */
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Shadows - softer and more modern */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.7;
+    /* Increased for better readability */
+    background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    /* Extra bold for friendlier pop */
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    /* Slightly tighter for that professional/friendly look */
+    text-align: center !important;
+    /* Force centering for all titles */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 4rem;
+    /* Big and bold */
+}
+
+h2 {
+    font-size: 3rem;
+    /* Prominent section headers */
+    position: relative;
+    display: inline-block;
+    /* Keep for underline width */
+    width: auto;
+    margin: 0 auto 40px !important;
+    clear: both;
+}
+
+/* Ensure parents center their contents */
+section .container,
+.hero-content,
+.program-content,
+.trust-content,
+.footer-col,
+.footer-bottom,
+footer {
+    text-align: center;
+}
+
+/* Add a playful underline/accent to H2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    right: 10%;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #003366 100%);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    filter: brightness(1.1);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.section {
+    padding: 60px 0;
+    /* consistent spacing */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.nav-links .btn-primary {
+    color: var(--color-white);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 160px 0;
+    overflow: hidden;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Blue gradient overlay: Light Blue to Primary Blue */
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.4) 0%, rgba(0, 69, 124, 0.7) 100%);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    /* Constrain width for better readability on large screens */
+}
+
+.hero-content {
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: var(--color-white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta-wrapper {
+    margin-top: 32px;
+}
+
+.hero-checks {
+    margin: var(--spacing-lg) 0;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    /* Darker text for checks */
+}
+
+.check-icon {
+    color: var(--color-success);
+    /* Green check */
+    background: #e6f4ea;
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+/* Video Section */
+.video-tour-section {
+    background-color: #E2E8F0;
+    /* Much more visible contrast */
+    position: relative;
+    padding: 120px 0;
+    /* Plenty of space */
+}
+
+.custom-shape-divider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 60px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top .shape-fill {
+    fill: #00457C;
+    /* Match the hero video overlay/theme or use white if transitioning from white */
+    /* Actually, transitioning FROM hero which has video? 
+       The hero ends with video/blue overlay. 
+       This section is #FAFAFA. 
+       If we want a wave FROM the hero into this, the wave should be the color of THIS section on top of the hero?
+       Or the color of the HERO on top of this?
+       Let's make the wave fill match the previous section's bottom or be white if we want a cloud effect.
+       If the hero is video, a white wave looks like clouds at the bottom of the hero.
+       Let's try white to transition from 'sky/video' to 'content'.
+    */
+    fill: #FFFFFF;
+}
+
+/* If we want the wave to overlap the video, we might need negative margin on the section or absolute positioning.
+   Currently, it's inside the section at the top. 
+   To make it look like the previous section flows into this efficiently, we often put the divider at the BOTTOM of the previous section
+   OR at the TOP of this one but taking up space.
+   Let's stick to TOP of this section for now.
+*/
+
+
+.video-container {
+    position: relative;
+    max-width: 960px;
+    /* Slightly wider for the frame */
+    margin: 60px auto;
+    padding: 15px;
+    /* Spacing for the tray */
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    background: #fff;
+    /* The "Board" */
+
+    /* Whiteboard Frame - Silver Aluminum */
+    border: 12px solid #D3D3D3;
+    border-radius: 8px;
+    /* Slightly rounded corners for safety */
+    box-shadow:
+        inset 0 0 10px rgba(0, 0, 0, 0.05),
+        /* Subtle inner board depth */
+        0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Soft outer shadow */
+
+    overflow: visible;
+    /* To allow tray to overflow */
+    transform: rotate(-0.5deg);
+    /* Very slight playful tilt */
+    transition: transform 0.3s ease;
+}
+
+/* Whiteboard Marker Tray */
+.video-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    /* Positioned below the frame */
+    left: 10%;
+    right: 10%;
+    height: 10px;
+    background: #BDC3C7;
+    /* Slightly darker silver */
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #A9A9A9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.video-wrapper:hover {
+    transform: rotate(0deg) scale(1.005);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #000;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: var(--color-white);
+    padding: 40px 30px 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 8px solid #ffffff;
+    /* Sticky/Sticker look */
+    position: relative;
+    overflow: visible;
+    /* Changed to visible for tape effect */
+    margin-top: 15px;
+    /* Space for tape */
+}
+
+/* Decorative Tape Effect */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 60px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+.feature-card:nth-child(even)::before {
+    transform: translateX(-50%) rotate(3deg);
+    background: rgba(255, 217, 61, 0.3);
+    /* Subtle yellow tint for some tapes */
+}
+
+.card-img {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    line-height: 1.3;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Playful Scribble Underline for Card Titles */
+.feature-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: -5px;
+    right: -5px;
+    height: 8px;
+    background: var(--color-accent);
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 20px 50px 20px 50px;
+    transform: rotate(-1deg);
+}
+
+.feature-card:nth-child(even) h3::after {
+    background: var(--color-secondary);
+    transform: rotate(1deg);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px) rotate(1deg) scale(1.03);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.feature-card:nth-child(even):hover {
+    transform: translateY(-12px) rotate(-1deg) scale(1.03);
+}
+
+/* Pastel Colors for Cards with slight individual rotations for a "pinned" look */
+.feature-card:nth-child(1) {
+    background-color: #FFF0F0;
+    transform: rotate(-1deg);
+}
+
+.feature-card:nth-child(2) {
+    background-color: #F0F7FF;
+    transform: rotate(1deg);
+}
+
+.feature-card:nth-child(3) {
+    background-color: #FFF9E6;
+    transform: rotate(-0.5deg);
+}
+
+.feature-card:nth-child(4) {
+    background-color: #F0FFF4;
+    transform: rotate(0.8deg);
+}
+
+.feature-card:nth-child(5) {
+    background-color: #F8F0FF;
+    transform: rotate(-0.3deg);
+}
+
+.feature-card:nth-child(6) {
+    background-color: #FFF4E6;
+    transform: rotate(0.5deg);
+}
+
+.feature-icon-wrapper {
+    width: 120px;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    font-size: 3rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Colors */
+.text-heart {
+    color: #FF6B6B;
+}
+
+.text-info {
+    color: #3498db;
+}
+
+.text-accent {
+    color: #F1C40F;
+}
+
+.text-success {
+    color: #27AE60;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-warning {
+    color: #E67E22;
+}
+
+.feature-icon {
+    display: none;
+    /* Deprecated in favor of wrapper */
+}
+
+/* Checklist Cards (Reusable list style) */
+.checklist-cards {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checklist-cards li {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.checklist-cards li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    background-color: #fcfcfc;
+}
+
+.checklist-cards i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background-color: #fdfdfd;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info-item {
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    border: 4px solid #fff;
+    transform: rotate(-1deg);
+    text-align: left;
+    /* Ensure info text is left aligned within card */
+}
+
+.contact-info-item:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.contact-info-item:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-bg-light);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.contact-form-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border: 8px solid #ffffff;
+    position: relative;
+}
+
+/* Tape Effect for Form */
+.contact-form-card::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    width: 80px;
+    height: 30px;
+    background: rgba(255, 217, 61, 0.4);
+    backdrop-filter: blur(2px);
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    text-align: left;
+    /* Better readability for forms */
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 2px solid #edf2f7;
+    background: #f8fafc;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: left;
+    /* Keep input text left aligned */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 69, 124, 0.1);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 60px 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Splash Hands Decoration */
+.handprint-decor {
+    position: absolute;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.hand-hero-top-right {
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    transform: rotate(15deg);
+}
+
+.hand-hero-bottom-left {
+    bottom: -30px;
+    left: -30px;
+    width: 180px;
+    transform: rotate(-15deg);
+}
+
+.hand-section-right {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    width: 150px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hand-section-left {
+    position: absolute;
+    left: -40px;
+    bottom: 20px;
+    width: 150px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hand-program-top {
+    position: absolute;
+    top: -30px;
+    left: 20%;
+    width: 120px;
+    opacity: 0.08;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.hand-footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/branding/handprints-border.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: 0;
+    mix-blend-mode: overlay;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent) !important;
+    transform: translateX(5px);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+
+/* Flex Layouts for Desktop */
+.hero-container,
+.program-container,
+.trust-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-content,
+.hero-image,
+.program-content,
+.program-image,
+.trust-content,
+.trust-image {
+    flex: 1;
+}
+
+/* Specific Section Layouts */
+.program-container {
+    flex-direction: row-reverse;
+    /* Image Left, Content Right logic inverted for wrap-reverse if needed, but standard row-reverse puts content left, image right */
+    flex-wrap: wrap-reverse;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    /* Global Mobile Fixes */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Hide Decorative Handprints on Mobile to prevent clutter/overflow */
+    .handprint-decor,
+    .hand-section-right,
+    .hand-section-left,
+    .hand-program-top {
+        display: none;
+    }
+
+    /* Navigation */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Typography */
+    .hero h1 {
+        font-size: 2rem;
+        /* Reduced from 2.5rem */
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Layout Adjustments */
+    .hero-container {
+        flex-direction: column-reverse;
+        /* Image top, content bottom on mobile? Or standard stack */
+        /* Design preference: Content first usually unless image is hero. 
+           Current HTML: Content is first div, Image is second div.
+           Column-reverse puts Image on top, Content on bottom. */
+    }
+
+    .hero-content,
+    .hero-image,
+    .program-content,
+    .program-image,
+    .trust-content,
+    .trust-image {
+        flex: auto;
+        /* Take full width */
+        width: 100%;
+    }
+
+    .program-container {
+        flex-direction: column;
+        /* Stack normally */
+    }
+
+    .trust-container {
+        flex-direction: column;
+    }
+
+    .hero-image img,
+    .hero-image video,
+    .program-image img,
+    .trust-image img {
+        margin-bottom: 20px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form-card {
+        padding: 30px 20px;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+}
